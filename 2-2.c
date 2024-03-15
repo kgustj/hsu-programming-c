@@ -38,10 +38,11 @@ int main(void)
     printf("\n");
 
     // 5
-    float x;
+    float x, result;
     printf("실수를 입력하시오: ");
     scanf("%f", &x);
-    printf("다항식의 값은: %.2f\n", 3 * x * x + 7 * x + 11);
+    result = 3 * x * x + 7 * x + 11;
+    printf("다항식의 값은: %.2f\n", result);
     printf("\n");
 
     // 6
