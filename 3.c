@@ -22,16 +22,16 @@ int main(void) // 함수 시작
 
     // 3
     int x = 10, y = 20, tmp; // 변수 지정
-    printf("x=%d, y=%d\n", x, y);
+    printf("x=%d y=%d\n", x, y);
     tmp = x; // x -> tmp
     x = y; // y -> x
     y = tmp; // tmp -> y
-    printf("x=%d, y=%d\n", x, y);
+    printf("x=%d y=%d\n", x, y);
     printf("\n");
 
     // 4
     double length, width, height, volume; // 변수 지정
-    printf("상자의 가로 세로 높이를 한번에 입력:");
+    printf("상자의 가로 세로 높이를 한번에 입력: ");
     scanf("%lf %lf %lf", &length, &width, &height); // double형으로 입력
     volume = length * width * height; // 연산
     printf("상자의 부피는 %lf입니다.\n", volume);
@@ -43,7 +43,7 @@ int main(void) // 함수 시작
     printf("평을 입력하세요: ");
     scanf("%lf", &pyeong); // double형으로 입력
     sqm = SQMETER_PER_PYEONG * pyeong; // 연산
-    printf("%lf평방미터입니다.", sqm);
+    printf("%lf평방미터입니다.\n", sqm);
     printf("\n");
 
     // 8
