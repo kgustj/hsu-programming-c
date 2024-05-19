@@ -1,8 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
-int main(void) // 함수 시작
-{
+int main(void) {
     // 1
     float salary, time; // 변수 지정
     printf("연봉을 입력하시오(단위: 만원): ");

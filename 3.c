@@ -1,8 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
-int main(void) // 함수 시작
-{
+int main(void) {
     // 1
     float data1; // 변수 지정
     printf("실수를 입력하시오: ");
