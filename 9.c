@@ -124,24 +124,43 @@ int func_8_11() {
 
 // 8_16
 static int balance = 0;
-void deposit() { printf(""); }
-void withdrawal() {}
-int func_8_16() {
+void deposit() {
+    int amount;
+    printf("입금 금액을 입력하시오: ");
+    scanf("%d", &amount);
+    balance += amount;
+}
+void withdrawal() {
+    int amount;
+    printf("출금 금액을 입력하시오: ");
+    scanf("%d", &amount);
+    balance -= amount;
+}
+void func_8_16() {
     int menu;
-    printf("********** Welcome to Express ATM **********\n");
-    printf("<1> 잔액\n<2>입금\n<3>출금\n<4>종료\n");
-    printf("메뉴를 선택하시오: ");
-    scanf("%d", &menu);
-    switch (menu) {
-    case 1:
-        break;
-    case 2:
-        deposit();
-    case 3:
-    default:
-        break;
+    while (1) {
+        printf("********** Welcome to Express ATM **********\n");
+        printf("<1> 잔액\n<2> 입금\n<3> 출금\n<4> 종료\n");
+        printf("메뉴를 선택하시오: ");
+        scanf("%d", &menu);
+        switch (menu) {
+        case 1:
+            break;
+        case 2:
+            deposit();
+            break;
+        case 3:
+            withdrawal();
+            break;
+        case 4:
+            printf("프로그램을 종료합니다.\n");
+            return;
+        default:
+            break;
+        }
+        printf("잔고는 %d원 입니다.\n", balance);
     }
-    printf("잔액은 %d원 입니다.", balance);
+    printf("\n");
 }
 
 int main(void) {
@@ -153,6 +172,6 @@ int main(void) {
     // func_8_8();
     // func_8_10();
     func_8_11();
-    // func_8_16();
+    func_8_16();
     return 0;
 }
