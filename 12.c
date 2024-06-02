@@ -10,7 +10,7 @@ void func1() {
     str[strcspn(str, "\n")] = 0;
 
     printf("역순 문자열: ");
-    for (int i = strlen(str) - 1; i >= 0; i--) {
+    for (int i = strlen(str) - 1; 0 <= i; i--) {
         putchar(str[i]);
     }
 
@@ -26,7 +26,7 @@ void func2() {
     input[strcspn(input, "\n")] = 0;
 
     int j = 0;
-    for (int i = 0; input[i] != '\0'; i++) {
+    for (int i = 0; input[i]; i++) {
         if (input[i] != ' ') {
             output[j++] = input[i];
         }
@@ -48,7 +48,7 @@ void func3() {
     char remove = getchar();
 
     int j = 0;
-    for (int i = 0; input[i] != '\0'; i++) {
+    for (int i = 0; input[i]; i++) {
         if (input[i] != remove) {
             output[j++] = input[i];
         }
@@ -70,7 +70,7 @@ void func4() {
     char target = getchar();
 
     int count = 0;
-    for (int i = 0; str[i] != '\0'; i++) {
+    for (int i = 0; str[i]; i++) {
         if (str[i] == target) {
             count++;
         }
@@ -88,7 +88,7 @@ void func5() {
     fgets(str, sizeof(str), stdin);
     str[strcspn(str, "\n")] = '\0';
 
-    for (int i = 0; str[i] != '\0'; i++) {
+    for (int i = 0; str[i]; i++) {
         if (isupper(str[i])) count[str[i] - 65]++;
         if (islower(str[i])) count[str[i] - 97]++;
     }
@@ -107,7 +107,7 @@ void func6() {
     fgets(str, sizeof(str), stdin);
     str[strcspn(str, "\n")] = '\0';
 
-    for (int i = 0; str[i] != '\0'; i++) {
+    for (int i = 0; str[i]; i++) {
         if (isalpha(str[i])) alpha++;
         else if (isdigit(str[i])) digit++;
         else symbol++;
@@ -157,7 +157,9 @@ void func8() {
     printf("\n");
 }
 
-void func9() {}
+void func9() {
+    // 모르겠어요..
+}
 
 void func10() {
     char str[100], word[100];
@@ -171,7 +173,7 @@ void func10() {
     word[strcspn(word, "\n")] = '\0';
 
     char *p = str;
-    while ((p = strstr(p, word)) != NULL) {
+    while ((p = strstr(p, word)) != '\0') {
         count++;
         p++;
     }
@@ -218,7 +220,7 @@ void func12() {
 
 int main(void) {
     // func1();
-    // func2();
+    func2();
     // func3();
     // func4();
     // func5();
