@@ -1,6 +1,6 @@
 ---
 IndentWidth: 4
-ColumnLimit: 120
 BasedOnStyle: LLVM
 AlignTrailingComments: false
+AllowShortFunctionsOnASingleLine: Empty
 AllowShortIfStatementsOnASingleLine: AllIfsAndElse

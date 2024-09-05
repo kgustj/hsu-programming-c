@@ -71,9 +71,7 @@ void func4() {
 
     int count = 0;
     for (int i = 0; str[i]; i++) {
-        if (str[i] == target) {
-            count++;
-        }
+        if (str[i] == target) count++;
     }
 
     printf("%c의 개수: %d\n", target, count);
@@ -125,6 +123,7 @@ int get_response(char *prompt) {
 
     if (strcmp(prompt, "yes") == 0) return 1;
     else if (strcmp(prompt, "no") == 0) return 0;
+    return -1;
 }
 
 void func7() {
@@ -173,7 +172,7 @@ void func10() {
     word[strcspn(word, "\n")] = '\0';
 
     char *p = str;
-    while ((p = strstr(p, word)) != '\0') {
+    while ((p = strstr(p, word)) != NULL) {
         count++;
         p++;
     }
@@ -220,7 +219,7 @@ void func12() {
 
 int main(void) {
     // func1();
-    func2();
+    // func2();
     // func3();
     // func4();
     // func5();

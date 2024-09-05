@@ -130,7 +130,8 @@ int main(void) {
     char x6;
     printf("문자를 입력하시오: ");
     // 입력 버퍼가 없을 떄까지 getchar() 실행
-    // while (getchar() != '\n') { }
+    while (getchar() != '\n') {
+    }
     x6 = getchar();
     switch (x6) {
     case 'a':
